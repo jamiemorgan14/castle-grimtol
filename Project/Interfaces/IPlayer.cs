@@ -3,9 +3,8 @@ using CastleGrimtol.Project.Models;
 
 namespace CastleGrimtol.Project.Interfaces
 {
-    public interface IPlayer
-    {
-        string PlayerName { get; set; }
-        List<Item> Inventory { get; set; }
-    }
+  public interface IPlayer
+  {
+    List<Item> Inventory { get; set; }
+  }
 }
