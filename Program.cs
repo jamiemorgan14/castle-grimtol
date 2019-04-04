@@ -7,6 +7,7 @@ namespace CastleGrimtol
   {
     public static void Main(string[] args)
     {
+
       System.Console.WriteLine("Welcome to the Air Force!");
       GameService gameService = new GameService();
       gameService.StartGame();

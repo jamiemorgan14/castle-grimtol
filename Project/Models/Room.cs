@@ -8,7 +8,7 @@ namespace CastleGrimtol.Project.Models
   {
     public string Name { get; set; }
     public string Description { get; set; }
-    public Item Item { get; set; }
+    public List<Item> Items { get; set; }
     public Dictionary<string, IRoom> Exits { get; set; }
 
     internal IRoom TravelToRoom(string playersChosenDirection)
@@ -17,17 +17,18 @@ namespace CastleGrimtol.Project.Models
       {
         return Exits[playersChosenDirection];
       }
-      System.Console.WriteLine("You can't go that way!");
-      return (IRoom)this;
+      else
+      {
+        return Exits["oops"];
+      }
     }
-
-    internal void AddItem(Item item)
-    {
-      Item = item;
-    }
-    internal void AddExit(string direction, IRoom destination)
+    public void AddExit(string direction, IRoom destination)
     {
       Exits.Add(direction, destination);
+    }
+    public void AddItem(Item item)
+    {
+      Items.Add(item);
     }
 
     public Room(string name, string description, Item item = null)
@@ -35,6 +36,7 @@ namespace CastleGrimtol.Project.Models
       Name = name;
       Description = description;
       Exits = new Dictionary<string, IRoom>();
+      Items = new List<Item>();
     }
 
   }

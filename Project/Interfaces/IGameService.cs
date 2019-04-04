@@ -35,12 +35,12 @@ namespace CastleGrimtol.Project.Interfaces
     //When taking an item be sure the item is in the current room 
     //before adding it to the player inventory, Also don't forget to 
     //remove the item from the room it was picked up in
-    void TakeItem();
+    void TakeItem(Item item);
 
     //No need to Pass a room since Items can only be used in the CurrentRoom
     //Make sure you validate the item is in the room or player inventory before
     //being able to use the item
-    void UseItem(string itemName);
+    void UseItem(Item item);
 
     //Print the list of items in the players inventory to the console
     void Inventory();

@@ -7,10 +7,11 @@ namespace CastleGrimtol.Project.Models
   public class Player : IPlayer
   {
     public List<Item> Inventory { get; set; }
+    public string Name { get; set; }
 
-
-    public Player()
+    public Player(string name)
     {
+      Name = name;
       Inventory = new List<Item>();
     }
 
