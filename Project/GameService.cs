@@ -20,6 +20,7 @@ namespace CastleGrimtol.Project
       Item dd214 = new Item("DD-214!", "If you can find your way to the door to the civilian world, this will serve as your key to unlock it!");
       Item morale = new Item("Morale!", "Morale reduces the effects of the punishments your flight chief has given you.");
 
+      //Create rooms
       Room basic = new Room("Basic Training", $"Welcome to basic training, {CurrentPlayer.Name}. The foundation of your career.  (Go north) to travel to your first base");
       Room firstBase = new Room("First Base", "Your first base is where most of your time will be spent");
       Room workCenter = new Room("Work Center", "Your work center is where you will be spending more time than you ever thought possible");
@@ -179,7 +180,6 @@ You must use the DD-214 to unlock the door to exit the separation room");
       }
       System.Console.WriteLine($@"
 {CurrentRoom.Name}: {CurrentRoom.Description}");
-
     }
 
     private void WinGame()
